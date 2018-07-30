@@ -8,31 +8,36 @@
 
 import Foundation
 
-func dividedBy3Description<T: FixedWidthInteger>(_ number: T) -> String {
-    return number % 3 == 0 ? "Fizz" : ""
-}
-
-func dividedBy5Description<T: FixedWidthInteger>(_ number: T) -> String {
-    return number % 5 == 0 ? "Buzz" : ""
-}
-
-func numberDescription<T: FixedWidthInteger>(_ number: T) -> String {
-    let functions : Array<(T)->String> = [dividedBy3Description, dividedBy5Description]
-    var result = ""
+extension FixedWidthInteger {
     
-    for function in functions {
-        result += function(number)
+    fileprivate func dividedBy3Description(_ number: Self) -> String {
+        return number % 3 == 0 ? "Fizz" : ""
     }
     
-    return result != "" ? result : String(number)
+    fileprivate func dividedBy5Description(_ number: Self) -> String {
+        return number % 5 == 0 ? "Buzz" : ""
+    }
+    
+    public var symbolicDescription: String {
+        let functions = [dividedBy3Description, dividedBy5Description]
+        var result = ""
+        
+        for function in functions {
+            result += function(self)
+        }
+        
+        return result != "" ? result : String(self)
+    }
+
 }
 
-print(numberDescription(3))
-print(numberDescription(5))
-print(numberDescription(15))
-print(numberDescription(4))
+print(3.symbolicDescription)
+print(5.symbolicDescription)
+print(15.symbolicDescription)
+print(4.symbolicDescription)
 
-print(numberDescription(-3))
-print(numberDescription(-5))
-print(numberDescription(-15))
-print(numberDescription(-4))
+print((-3).symbolicDescription)
+print((-5).symbolicDescription)
+print((-15).symbolicDescription)
+print((-4).symbolicDescription)
+
