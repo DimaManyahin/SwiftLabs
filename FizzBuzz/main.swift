@@ -10,22 +10,19 @@ import Foundation
 
 extension FixedWidthInteger {
     
-    fileprivate func dividedBy3Description(_ number: Self) -> String {
-        return number % 3 == 0 ? "Fizz" : ""
+    fileprivate func dividedBy3Description() -> String {
+        return self % 3 == 0 ? "Fizz" : ""
     }
     
-    fileprivate func dividedBy5Description(_ number: Self) -> String {
-        return number % 5 == 0 ? "Buzz" : ""
+    fileprivate func dividedBy5Description() -> String {
+        return self % 5 == 0 ? "Buzz" : ""
     }
     
     public var symbolicDescription: String {
-        let functions = [dividedBy3Description, dividedBy5Description]
-        var result = ""
-        
-        for function in functions {
-            result += function(self)
+        let result = [dividedBy3Description, dividedBy5Description].reduce("") { 
+            $0 + $1()
         }
-        
+
         return result != "" ? result : String(self)
     }
 
