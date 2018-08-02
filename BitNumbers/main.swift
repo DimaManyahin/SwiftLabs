@@ -28,7 +28,7 @@ func generalDescription2<T: BinaryInteger>(of number: T) -> String {
     return "\(type(of: number)) (\(number)) has next bits \(number.bitsString())"
 }
 
-// MARK: - Output with generic function
+
 print("--- Output with generic function ---")
 
 print(generalDescription1(of: 26))
@@ -46,7 +46,7 @@ print(generalDescription1(of: Int16(-26)))
 print(generalDescription1(of: Int8(26)))
 print(generalDescription1(of: Int8(-26)))
 
-// MARK: - Output with extension function
+
 print("\n--- Output with extension function ---")
 
 print(generalDescription2(of: 34))

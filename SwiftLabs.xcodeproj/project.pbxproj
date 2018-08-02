@@ -7,11 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		374A17452112FF6400934C45 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A17442112FF6400934C45 /* main.swift */; };
+		374A174A2112FFB400934C45 /* BeingStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A17492112FFB400934C45 /* BeingStruct.swift */; };
+		374A174C2113004800934C45 /* BeingGender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A174B2113004800934C45 /* BeingGender.swift */; };
 		376BC4E92108618A00AF8E20 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BC4E82108618A00AF8E20 /* main.swift */; };
 		377CA1C12111BF3F009ACA64 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377CA1C02111BF3F009ACA64 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		374A17402112FF6300934C45 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		376BC4E42108618A00AF8E20 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -33,6 +45,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		374A17422112FF6300934C45 /* Being */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Being; sourceTree = BUILT_PRODUCTS_DIR; };
+		374A17442112FF6400934C45 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		374A17492112FFB400934C45 /* BeingStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeingStruct.swift; sourceTree = "<group>"; };
+		374A174B2113004800934C45 /* BeingGender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeingGender.swift; sourceTree = "<group>"; };
 		376BC4E62108618A00AF8E20 /* FizzBuzz */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FizzBuzz; sourceTree = BUILT_PRODUCTS_DIR; };
 		376BC4E82108618A00AF8E20 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		377CA1BE2111BF3F009ACA64 /* BitNumbers */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BitNumbers; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +56,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		374A173F2112FF6300934C45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		376BC4E32108618A00AF8E20 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -57,11 +80,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		374A17432112FF6400934C45 /* Being */ = {
+			isa = PBXGroup;
+			children = (
+				374A17442112FF6400934C45 /* main.swift */,
+				374A17492112FFB400934C45 /* BeingStruct.swift */,
+				374A174B2113004800934C45 /* BeingGender.swift */,
+			);
+			path = Being;
+			sourceTree = "<group>";
+		};
 		376BC4CF2108606700AF8E20 = {
 			isa = PBXGroup;
 			children = (
 				376BC4E72108618A00AF8E20 /* FizzBuzz */,
 				377CA1BF2111BF3F009ACA64 /* BitNumbers */,
+				374A17432112FF6400934C45 /* Being */,
 				376BC4D92108606700AF8E20 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +105,7 @@
 			children = (
 				376BC4E62108618A00AF8E20 /* FizzBuzz */,
 				377CA1BE2111BF3F009ACA64 /* BitNumbers */,
+				374A17422112FF6300934C45 /* Being */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +129,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		374A17412112FF6300934C45 /* Being */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 374A17482112FF6400934C45 /* Build configuration list for PBXNativeTarget "Being" */;
+			buildPhases = (
+				374A173E2112FF6300934C45 /* Sources */,
+				374A173F2112FF6300934C45 /* Frameworks */,
+				374A17402112FF6300934C45 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Being;
+			productName = Being;
+			productReference = 374A17422112FF6300934C45 /* Being */;
+			productType = "com.apple.product-type.tool";
+		};
 		376BC4E52108618A00AF8E20 /* FizzBuzz */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 376BC4EA2108618A00AF8E20 /* Build configuration list for PBXNativeTarget "FizzBuzz" */;
@@ -138,6 +190,9 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Dima Manyahin";
 				TargetAttributes = {
+					374A17412112FF6300934C45 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 					376BC4E52108618A00AF8E20 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
@@ -160,11 +215,22 @@
 			targets = (
 				376BC4E52108618A00AF8E20 /* FizzBuzz */,
 				377CA1BD2111BF3F009ACA64 /* BitNumbers */,
+				374A17412112FF6300934C45 /* Being */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		374A173E2112FF6300934C45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				374A174A2112FFB400934C45 /* BeingStruct.swift in Sources */,
+				374A17452112FF6400934C45 /* main.swift in Sources */,
+				374A174C2113004800934C45 /* BeingGender.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		376BC4E22108618A00AF8E20 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -184,6 +250,24 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		374A17462112FF6400934C45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		374A17472112FF6400934C45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 		376BC4DD2108606700AF8E20 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -336,6 +420,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		374A17482112FF6400934C45 /* Build configuration list for PBXNativeTarget "Being" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				374A17462112FF6400934C45 /* Debug */,
+				374A17472112FF6400934C45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		376BC4D32108606700AF8E20 /* Build configuration list for PBXProject "SwiftLabs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
