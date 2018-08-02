@@ -20,48 +20,43 @@ extension BinaryInteger {
     }
 }
 
-func generalDescription1<T: BinaryInteger>(of number: T) -> String {
-    return "\(type(of: number)) (\(number)) has next bits \(bitsString(of: number))"
+func generalDescription<T: BinaryInteger>(of number: T, _ useExtension: Bool = false) -> String {
+    return "\(type(of: number)) (\(number)) has next bits \(useExtension ? number.bitsString() : bitsString(of: number))"
 }
-
-func generalDescription2<T: BinaryInteger>(of number: T) -> String {
-    return "\(type(of: number)) (\(number)) has next bits \(number.bitsString())"
-}
-
 
 print("--- Output with generic function ---")
 
-print(generalDescription1(of: 26))
-print(generalDescription1(of: -26))
+print(generalDescription(of: 26))
+print(generalDescription(of: -26))
 
-print(generalDescription1(of: Int64(26)))
-print(generalDescription1(of: Int64(-26)))
+print(generalDescription(of: Int64(26)))
+print(generalDescription(of: Int64(-26)))
 
-print(generalDescription1(of: Int32(26)))
-print(generalDescription1(of: Int32(-26)))
+print(generalDescription(of: Int32(26)))
+print(generalDescription(of: Int32(-26)))
 
-print(generalDescription1(of: Int16(26)))
-print(generalDescription1(of: Int16(-26)))
+print(generalDescription(of: Int16(26)))
+print(generalDescription(of: Int16(-26)))
 
-print(generalDescription1(of: Int8(26)))
-print(generalDescription1(of: Int8(-26)))
+print(generalDescription(of: Int8(26)))
+print(generalDescription(of: Int8(-26)))
 
 
 print("\n--- Output with extension function ---")
 
-print(generalDescription2(of: 34))
-print(generalDescription2(of: -34))
+print(generalDescription(of: 34, true))
+print(generalDescription(of: -34, true))
 
-print(generalDescription2(of: Int64(34)))
-print(generalDescription2(of: Int64(-34)))
+print(generalDescription(of: Int64(34), true))
+print(generalDescription(of: Int64(-34), true))
 
-print(generalDescription2(of: Int32(34)))
-print(generalDescription2(of: Int32(-34)))
+print(generalDescription(of: Int32(34), true))
+print(generalDescription(of: Int32(-34), true))
 
-print(generalDescription2(of: Int16(34)))
-print(generalDescription2(of: Int16(-34)))
+print(generalDescription(of: Int16(34), true))
+print(generalDescription(of: Int16(-34), true))
 
-print(generalDescription2(of: Int8(34)))
-print(generalDescription2(of: Int8(-34)))
+print(generalDescription(of: Int8(34), true))
+print(generalDescription(of: Int8(-34), true))
 
 
