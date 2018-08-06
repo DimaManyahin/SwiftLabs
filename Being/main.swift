@@ -8,4 +8,40 @@
 
 import Foundation
 
+print("---------Random fill-----------")
+
+(0..<10).forEach { _ in
+    if Bool.random() {
+        print(BeingStruct())
+    } else {
+        print(BeingClass())
+    }
+}
+
+print("---------Pronounce of struct-----------")
+
+var being = BeingStruct()
+print(being.pronounceName())
+print(being.pronounceGender())
+print(being.pronounceAge())
+
+print("---------Pronounce of class-----------")
+
+var beingClass = BeingClass()
+beingClass.age = 50;
+print(beingClass.pronounceName())
+print(beingClass.pronounceGender())
+print(beingClass.pronounceAge())
+print("beingClass is \(beingClass.isLive ? "alive" : "dead")")
+
+beingClass.growAge()
+print("After default grow")
+print(beingClass.pronounceAge())
+
+beingClass.growAge(100)
+print("100 years passed and try to speak")
+print(beingClass.pronounceName())
+print(beingClass.pronounceGender())
+print(beingClass.pronounceAge())
+print("beingClass is \(beingClass.isLive ? "alive" : "dead")")
 

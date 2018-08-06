@@ -8,7 +8,22 @@
 
 import Foundation
 
-enum BeingGender {
+enum BeingGender : Int, CustomStringConvertible {
     case male
     case female
+    
+    static func random() -> BeingGender {
+        return BeingGender(rawValue: (male.rawValue ... female.rawValue).random) ?? .male
+    }
+    
+    var description: String {
+        var result : String
+        switch self {
+        case .male:
+            result = "male"
+        case .female:
+            result = "female"
+        }
+        return result
+    }
 }
