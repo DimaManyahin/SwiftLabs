@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37271A3A2121F7B0006FDB5F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37271A392121F7B0006FDB5F /* main.swift */; };
+		37271A3F2121F7CF006FDB5F /* BeingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37271A3E2121F7CF006FDB5F /* BeingProtocol.swift */; };
+		37271A412121F7FB006FDB5F /* Speaking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37271A402121F7FB006FDB5F /* Speaking.swift */; };
+		37271A432121F889006FDB5F /* Living.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37271A422121F889006FDB5F /* Living.swift */; };
+		37271A452121F8D1006FDB5F /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37271A442121F8D1006FDB5F /* Random.swift */; };
+		37271A472121F8F7006FDB5F /* BeingGender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A174B2113004800934C45 /* BeingGender.swift */; };
+		37271A492121F8FC006FDB5F /* BeingGender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37271A482121F8FC006FDB5F /* BeingGender.swift */; };
+		37271A4C2121F9B7006FDB5F /* BeingClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37271A4A2121F9B7006FDB5F /* BeingClass.swift */; };
+		37271A4D2121F9B7006FDB5F /* BeingStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37271A4B2121F9B7006FDB5F /* BeingStruct.swift */; };
+		37271A4F2121FFA7006FDB5F /* Creating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37271A4E2121FFA7006FDB5F /* Creating.swift */; };
 		374A17452112FF6400934C45 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A17442112FF6400934C45 /* main.swift */; };
 		374A174A2112FFB400934C45 /* BeingStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A17492112FFB400934C45 /* BeingStruct.swift */; };
-		374A174C2113004800934C45 /* BeingGender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A174B2113004800934C45 /* BeingGender.swift */; };
 		376BC4E92108618A00AF8E20 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BC4E82108618A00AF8E20 /* main.swift */; };
 		377CA1C12111BF3F009ACA64 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377CA1C02111BF3F009ACA64 /* main.swift */; };
 		37FE55C82118C35300793F5D /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE55C72118C35300793F5D /* Random.swift */; };
@@ -20,6 +29,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		37271A352121F7B0006FDB5F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		374A17402112FF6300934C45 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -50,6 +68,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		37271A372121F7B0006FDB5F /* Being2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Being2; sourceTree = BUILT_PRODUCTS_DIR; };
+		37271A392121F7B0006FDB5F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		37271A3E2121F7CF006FDB5F /* BeingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeingProtocol.swift; sourceTree = "<group>"; };
+		37271A402121F7FB006FDB5F /* Speaking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speaking.swift; sourceTree = "<group>"; };
+		37271A422121F889006FDB5F /* Living.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Living.swift; sourceTree = "<group>"; };
+		37271A442121F8D1006FDB5F /* Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
+		37271A482121F8FC006FDB5F /* BeingGender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeingGender.swift; sourceTree = "<group>"; };
+		37271A4A2121F9B7006FDB5F /* BeingClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeingClass.swift; sourceTree = "<group>"; };
+		37271A4B2121F9B7006FDB5F /* BeingStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeingStruct.swift; sourceTree = "<group>"; };
+		37271A4E2121FFA7006FDB5F /* Creating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creating.swift; sourceTree = "<group>"; };
 		374A17422112FF6300934C45 /* Being */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Being; sourceTree = BUILT_PRODUCTS_DIR; };
 		374A17442112FF6400934C45 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		374A17492112FFB400934C45 /* BeingStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeingStruct.swift; sourceTree = "<group>"; };
@@ -66,6 +94,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		37271A342121F7B0006FDB5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		374A173F2112FF6300934C45 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -90,17 +125,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37271A382121F7B0006FDB5F /* Being2 */ = {
+			isa = PBXGroup;
+			children = (
+				37271A4A2121F9B7006FDB5F /* BeingClass.swift */,
+				37271A482121F8FC006FDB5F /* BeingGender.swift */,
+				37271A3E2121F7CF006FDB5F /* BeingProtocol.swift */,
+				37271A4B2121F9B7006FDB5F /* BeingStruct.swift */,
+				37271A422121F889006FDB5F /* Living.swift */,
+				37271A392121F7B0006FDB5F /* main.swift */,
+				37271A442121F8D1006FDB5F /* Random.swift */,
+				37271A402121F7FB006FDB5F /* Speaking.swift */,
+				37271A4E2121FFA7006FDB5F /* Creating.swift */,
+			);
+			path = Being2;
+			sourceTree = "<group>";
+		};
 		374A17432112FF6400934C45 /* Being */ = {
 			isa = PBXGroup;
 			children = (
-				374A17442112FF6400934C45 /* main.swift */,
+				37FE55CB2118D3E100793F5D /* BeingClass.swift */,
 				37FE55C92118CE6800793F5D /* BeingProtocol.swift */,
 				374A17492112FFB400934C45 /* BeingStruct.swift */,
-				37FE55CB2118D3E100793F5D /* BeingClass.swift */,
+				37FE55CF2118DE8A00793F5D /* LifeCicle.swift */,
+				374A17442112FF6400934C45 /* main.swift */,
 				374A174B2113004800934C45 /* BeingGender.swift */,
 				37FE55C72118C35300793F5D /* Random.swift */,
 				37FE55CD2118D92300793F5D /* Speak.swift */,
-				37FE55CF2118DE8A00793F5D /* LifeCicle.swift */,
 			);
 			path = Being;
 			sourceTree = "<group>";
@@ -111,6 +162,7 @@
 				376BC4E72108618A00AF8E20 /* FizzBuzz */,
 				377CA1BF2111BF3F009ACA64 /* BitNumbers */,
 				374A17432112FF6400934C45 /* Being */,
+				37271A382121F7B0006FDB5F /* Being2 */,
 				376BC4D92108606700AF8E20 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -121,6 +173,7 @@
 				376BC4E62108618A00AF8E20 /* FizzBuzz */,
 				377CA1BE2111BF3F009ACA64 /* BitNumbers */,
 				374A17422112FF6300934C45 /* Being */,
+				37271A372121F7B0006FDB5F /* Being2 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,6 +197,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		37271A362121F7B0006FDB5F /* Being2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37271A3B2121F7B0006FDB5F /* Build configuration list for PBXNativeTarget "Being2" */;
+			buildPhases = (
+				37271A332121F7B0006FDB5F /* Sources */,
+				37271A342121F7B0006FDB5F /* Frameworks */,
+				37271A352121F7B0006FDB5F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Being2;
+			productName = Being2;
+			productReference = 37271A372121F7B0006FDB5F /* Being2 */;
+			productType = "com.apple.product-type.tool";
+		};
 		374A17412112FF6300934C45 /* Being */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 374A17482112FF6400934C45 /* Build configuration list for PBXNativeTarget "Being" */;
@@ -205,6 +275,9 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Dima Manyahin";
 				TargetAttributes = {
+					37271A362121F7B0006FDB5F = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 					374A17412112FF6300934C45 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
@@ -231,11 +304,28 @@
 				376BC4E52108618A00AF8E20 /* FizzBuzz */,
 				377CA1BD2111BF3F009ACA64 /* BitNumbers */,
 				374A17412112FF6300934C45 /* Being */,
+				37271A362121F7B0006FDB5F /* Being2 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		37271A332121F7B0006FDB5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37271A432121F889006FDB5F /* Living.swift in Sources */,
+				37271A3A2121F7B0006FDB5F /* main.swift in Sources */,
+				37271A492121F8FC006FDB5F /* BeingGender.swift in Sources */,
+				37271A452121F8D1006FDB5F /* Random.swift in Sources */,
+				37271A3F2121F7CF006FDB5F /* BeingProtocol.swift in Sources */,
+				37271A412121F7FB006FDB5F /* Speaking.swift in Sources */,
+				37271A4D2121F9B7006FDB5F /* BeingStruct.swift in Sources */,
+				37271A4F2121FFA7006FDB5F /* Creating.swift in Sources */,
+				37271A4C2121F9B7006FDB5F /* BeingClass.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		374A173E2112FF6300934C45 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -246,8 +336,8 @@
 				37FE55CA2118CE6800793F5D /* BeingProtocol.swift in Sources */,
 				37FE55CC2118D3E100793F5D /* BeingClass.swift in Sources */,
 				374A174A2112FFB400934C45 /* BeingStruct.swift in Sources */,
+				37271A472121F8F7006FDB5F /* BeingGender.swift in Sources */,
 				374A17452112FF6400934C45 /* main.swift in Sources */,
-				374A174C2113004800934C45 /* BeingGender.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +360,24 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		37271A3C2121F7B0006FDB5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		37271A3D2121F7B0006FDB5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 		374A17462112FF6400934C45 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -440,6 +548,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		37271A3B2121F7B0006FDB5F /* Build configuration list for PBXNativeTarget "Being2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37271A3C2121F7B0006FDB5F /* Debug */,
+				37271A3D2121F7B0006FDB5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		374A17482112FF6400934C45 /* Build configuration list for PBXNativeTarget "Being" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

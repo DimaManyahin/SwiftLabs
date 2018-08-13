@@ -9,13 +9,8 @@
 import Foundation
 
 print("---------Random fill-----------")
-
 (0..<10).forEach { _ in
-    if Bool.random() {
-        print(BeingStruct())
-    } else {
-        print(BeingClass())
-    }
+    print(Bool.random() ? BeingStruct() : BeingClass())
 }
 
 print("---------Pronounce of struct-----------")

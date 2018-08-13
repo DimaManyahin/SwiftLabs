@@ -1,20 +1,22 @@
 //
 //  BeingProtocol.swift
-//  Being
+//  Being2
 //
-//  Created by Dima Manyahin on 8/6/18.
+//  Created by Dima Manyahin on 8/13/18.
 //  Copyright © 2018 Dima Manyahin. All rights reserved.
 //
 
 import Foundation
 
-protocol BeingProtocol : CustomStringConvertible, Speak, LifeCicle {
+protocol BeingProtocol : CustomStringConvertible, Speaking, Living, Creating {
     static var maxAge : UInt {get}
     static var randomAge : UInt {get}
+    
     var name : String {get set}
     var age : UInt {get set}
+    
     var gender : BeingGender {get}
-
+    
     init()
     init(name : String)
     init(gender : BeingGender, name : String, age : UInt)
@@ -35,12 +37,20 @@ extension BeingProtocol {
 }
 
 extension CustomStringConvertible where Self : BeingProtocol {
+//    var description: String {
+//        return "\(type(of:self)) with name=\(self.name), gender=\(self.gender), age=\(self.age)"
+//    }
     var description: String {
-        return "\(type(of:self)) with name=\(self.name), gender=\(self.gender), age=\(self.age)"
+        return """
+        \(type(of:self)) 
+        has father(\(self.father != nil ? "YES" : "NO")) 
+        has mother(\(self.mother != nil ? "YES" : "NO")) 
+        has children count = \(self.children.count)
+        """
     }
 }
 
-extension BeingProtocol where Self : LifeCicle {
+extension Living where Self : BeingProtocol {
     var isLive : Bool {
         return self.age < Self.maxAge
     }
@@ -52,7 +62,7 @@ extension BeingProtocol where Self : LifeCicle {
     }
 }
 
-extension BeingProtocol where Self : Speak & LifeCicle {
+extension Speaking where Self : BeingProtocol {
     func pronounceName() -> String {
         return self.isLive ? "My name is \(self.name)" : ""
     }
@@ -65,3 +75,15 @@ extension BeingProtocol where Self : Speak & LifeCicle {
         return self.isLive ? "My age is \(self.age)" : ""
     }
 }
+
+extension Creating where Self : BeingProtocol {
+    static func makeChild(father: inout Self, mother: inout Self) -> Self {
+        var child = Self()
+        child.father = father
+        child.mother = mother
+        father.children.append(child)
+        mother.children.append(child)
+        return child
+    }
+}
+
