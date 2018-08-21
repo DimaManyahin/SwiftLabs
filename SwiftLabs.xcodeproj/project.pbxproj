@@ -17,9 +17,23 @@
 		37271A4C2121F9B7006FDB5F /* BeingClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37271A4A2121F9B7006FDB5F /* BeingClass.swift */; };
 		37271A4D2121F9B7006FDB5F /* BeingStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37271A4B2121F9B7006FDB5F /* BeingStruct.swift */; };
 		37271A4F2121FFA7006FDB5F /* Creating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37271A4E2121FFA7006FDB5F /* Creating.swift */; };
+		3730ABE5212C925600423E5B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3730ABE4212C925600423E5B /* main.swift */; };
+		3730ABEA212C99A700423E5B /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3730ABE9212C99A700423E5B /* Application.swift */; };
+		3730ABEC212C9C6100423E5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3730ABEB212C9C6100423E5B /* AppDelegate.swift */; };
 		374A17452112FF6400934C45 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A17442112FF6400934C45 /* main.swift */; };
 		374A174A2112FFB400934C45 /* BeingStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A17492112FFB400934C45 /* BeingStruct.swift */; };
 		376BC4E92108618A00AF8E20 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376BC4E82108618A00AF8E20 /* main.swift */; };
+		376E7BAC212CB4E300C9B177 /* Tribe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E7BAB212CB4E300C9B177 /* Tribe.swift */; };
+		376E7BAE212CB59800C9B177 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E7BAD212CB59800C9B177 /* Random.swift */; };
+		376E7BB0212CB5DA00C9B177 /* BeingGender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E7BAF212CB5DA00C9B177 /* BeingGender.swift */; };
+		376E7BB4212CB7AA00C9B177 /* BeingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E7BB3212CB7AA00C9B177 /* BeingProtocol.swift */; };
+		376E7BB8212CB7CF00C9B177 /* Living.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E7BB5212CB7CF00C9B177 /* Living.swift */; };
+		376E7BB9212CB7CF00C9B177 /* Speaking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E7BB6212CB7CF00C9B177 /* Speaking.swift */; };
+		376E7BBA212CB7CF00C9B177 /* Creating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E7BB7212CB7CF00C9B177 /* Creating.swift */; };
+		376E7BBC212CB7D600C9B177 /* BeingClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E7BBB212CB7D600C9B177 /* BeingClass.swift */; };
+		376E7BBE212CB7DA00C9B177 /* BeingStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E7BBD212CB7DA00C9B177 /* BeingStruct.swift */; };
+		376E7BC1212CB91600C9B177 /* ControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E7BC0212CB91600C9B177 /* ControllerProtocol.swift */; };
+		376E7BC3212CBA0400C9B177 /* WelcomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376E7BC2212CBA0400C9B177 /* WelcomeScreenController.swift */; };
 		377CA1C12111BF3F009ACA64 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377CA1C02111BF3F009ACA64 /* main.swift */; };
 		37FE55C82118C35300793F5D /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE55C72118C35300793F5D /* Random.swift */; };
 		37FE55CA2118CE6800793F5D /* BeingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE55C92118CE6800793F5D /* BeingProtocol.swift */; };
@@ -30,6 +44,15 @@
 
 /* Begin PBXCopyFilesBuildPhase section */
 		37271A352121F7B0006FDB5F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		3730ABE0212C925600423E5B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -78,12 +101,27 @@
 		37271A4A2121F9B7006FDB5F /* BeingClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeingClass.swift; sourceTree = "<group>"; };
 		37271A4B2121F9B7006FDB5F /* BeingStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeingStruct.swift; sourceTree = "<group>"; };
 		37271A4E2121FFA7006FDB5F /* Creating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creating.swift; sourceTree = "<group>"; };
+		3730ABE2212C925600423E5B /* WarOfBeing */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WarOfBeing; sourceTree = BUILT_PRODUCTS_DIR; };
+		3730ABE4212C925600423E5B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3730ABE9212C99A700423E5B /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		3730ABEB212C9C6100423E5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		374A17422112FF6300934C45 /* Being */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Being; sourceTree = BUILT_PRODUCTS_DIR; };
 		374A17442112FF6400934C45 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		374A17492112FFB400934C45 /* BeingStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeingStruct.swift; sourceTree = "<group>"; };
 		374A174B2113004800934C45 /* BeingGender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeingGender.swift; sourceTree = "<group>"; };
 		376BC4E62108618A00AF8E20 /* FizzBuzz */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FizzBuzz; sourceTree = BUILT_PRODUCTS_DIR; };
 		376BC4E82108618A00AF8E20 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		376E7BAB212CB4E300C9B177 /* Tribe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tribe.swift; sourceTree = "<group>"; };
+		376E7BAD212CB59800C9B177 /* Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
+		376E7BAF212CB5DA00C9B177 /* BeingGender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeingGender.swift; sourceTree = "<group>"; };
+		376E7BB3212CB7AA00C9B177 /* BeingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeingProtocol.swift; sourceTree = "<group>"; };
+		376E7BB5212CB7CF00C9B177 /* Living.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Living.swift; sourceTree = "<group>"; };
+		376E7BB6212CB7CF00C9B177 /* Speaking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speaking.swift; sourceTree = "<group>"; };
+		376E7BB7212CB7CF00C9B177 /* Creating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creating.swift; sourceTree = "<group>"; };
+		376E7BBB212CB7D600C9B177 /* BeingClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeingClass.swift; sourceTree = "<group>"; };
+		376E7BBD212CB7DA00C9B177 /* BeingStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeingStruct.swift; sourceTree = "<group>"; };
+		376E7BC0212CB91600C9B177 /* ControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerProtocol.swift; sourceTree = "<group>"; };
+		376E7BC2212CBA0400C9B177 /* WelcomeScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenController.swift; sourceTree = "<group>"; };
 		377CA1BE2111BF3F009ACA64 /* BitNumbers */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BitNumbers; sourceTree = BUILT_PRODUCTS_DIR; };
 		377CA1C02111BF3F009ACA64 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		37FE55C72118C35300793F5D /* Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
@@ -95,6 +133,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		37271A342121F7B0006FDB5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3730ABDF212C925600423E5B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -141,6 +186,16 @@
 			path = Being2;
 			sourceTree = "<group>";
 		};
+		3730ABE3212C925600423E5B /* WarOfBeing */ = {
+			isa = PBXGroup;
+			children = (
+				376E7BBF212CB8F600C9B177 /* Controllers */,
+				376E7BB1212CB5EE00C9B177 /* AppSupport */,
+				376E7BB2212CB60E00C9B177 /* Models */,
+			);
+			path = WarOfBeing;
+			sourceTree = "<group>";
+		};
 		374A17432112FF6400934C45 /* Being */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +218,7 @@
 				377CA1BF2111BF3F009ACA64 /* BitNumbers */,
 				374A17432112FF6400934C45 /* Being */,
 				37271A382121F7B0006FDB5F /* Being2 */,
+				3730ABE3212C925600423E5B /* WarOfBeing */,
 				376BC4D92108606700AF8E20 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -174,6 +230,7 @@
 				377CA1BE2111BF3F009ACA64 /* BitNumbers */,
 				374A17422112FF6300934C45 /* Being */,
 				37271A372121F7B0006FDB5F /* Being2 */,
+				3730ABE2212C925600423E5B /* WarOfBeing */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -184,6 +241,41 @@
 				376BC4E82108618A00AF8E20 /* main.swift */,
 			);
 			path = FizzBuzz;
+			sourceTree = "<group>";
+		};
+		376E7BB1212CB5EE00C9B177 /* AppSupport */ = {
+			isa = PBXGroup;
+			children = (
+				3730ABEB212C9C6100423E5B /* AppDelegate.swift */,
+				3730ABE9212C99A700423E5B /* Application.swift */,
+				3730ABE4212C925600423E5B /* main.swift */,
+			);
+			path = AppSupport;
+			sourceTree = "<group>";
+		};
+		376E7BB2212CB60E00C9B177 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				376E7BBD212CB7DA00C9B177 /* BeingStruct.swift */,
+				376E7BBB212CB7D600C9B177 /* BeingClass.swift */,
+				376E7BB5212CB7CF00C9B177 /* Living.swift */,
+				376E7BB6212CB7CF00C9B177 /* Speaking.swift */,
+				376E7BB7212CB7CF00C9B177 /* Creating.swift */,
+				376E7BB3212CB7AA00C9B177 /* BeingProtocol.swift */,
+				376E7BAD212CB59800C9B177 /* Random.swift */,
+				376E7BAF212CB5DA00C9B177 /* BeingGender.swift */,
+				376E7BAB212CB4E300C9B177 /* Tribe.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		376E7BBF212CB8F600C9B177 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				376E7BC0212CB91600C9B177 /* ControllerProtocol.swift */,
+				376E7BC2212CBA0400C9B177 /* WelcomeScreenController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		377CA1BF2111BF3F009ACA64 /* BitNumbers */ = {
@@ -212,6 +304,23 @@
 			name = Being2;
 			productName = Being2;
 			productReference = 37271A372121F7B0006FDB5F /* Being2 */;
+			productType = "com.apple.product-type.tool";
+		};
+		3730ABE1212C925600423E5B /* WarOfBeing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3730ABE8212C925600423E5B /* Build configuration list for PBXNativeTarget "WarOfBeing" */;
+			buildPhases = (
+				3730ABDE212C925600423E5B /* Sources */,
+				3730ABDF212C925600423E5B /* Frameworks */,
+				3730ABE0212C925600423E5B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WarOfBeing;
+			productName = WarOrBeing;
+			productReference = 3730ABE2212C925600423E5B /* WarOfBeing */;
 			productType = "com.apple.product-type.tool";
 		};
 		374A17412112FF6300934C45 /* Being */ = {
@@ -278,6 +387,9 @@
 					37271A362121F7B0006FDB5F = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
+					3730ABE1212C925600423E5B = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 					374A17412112FF6300934C45 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
@@ -305,6 +417,7 @@
 				377CA1BD2111BF3F009ACA64 /* BitNumbers */,
 				374A17412112FF6300934C45 /* Being */,
 				37271A362121F7B0006FDB5F /* Being2 */,
+				3730ABE1212C925600423E5B /* WarOfBeing */,
 			);
 		};
 /* End PBXProject section */
@@ -323,6 +436,27 @@
 				37271A4D2121F9B7006FDB5F /* BeingStruct.swift in Sources */,
 				37271A4F2121FFA7006FDB5F /* Creating.swift in Sources */,
 				37271A4C2121F9B7006FDB5F /* BeingClass.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3730ABDE212C925600423E5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376E7BC3212CBA0400C9B177 /* WelcomeScreenController.swift in Sources */,
+				376E7BB8212CB7CF00C9B177 /* Living.swift in Sources */,
+				376E7BB4212CB7AA00C9B177 /* BeingProtocol.swift in Sources */,
+				376E7BAC212CB4E300C9B177 /* Tribe.swift in Sources */,
+				3730ABEC212C9C6100423E5B /* AppDelegate.swift in Sources */,
+				376E7BB0212CB5DA00C9B177 /* BeingGender.swift in Sources */,
+				376E7BBC212CB7D600C9B177 /* BeingClass.swift in Sources */,
+				376E7BC1212CB91600C9B177 /* ControllerProtocol.swift in Sources */,
+				376E7BAE212CB59800C9B177 /* Random.swift in Sources */,
+				376E7BBA212CB7CF00C9B177 /* Creating.swift in Sources */,
+				3730ABEA212C99A700423E5B /* Application.swift in Sources */,
+				3730ABE5212C925600423E5B /* main.swift in Sources */,
+				376E7BBE212CB7DA00C9B177 /* BeingStruct.swift in Sources */,
+				376E7BB9212CB7CF00C9B177 /* Speaking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +504,24 @@
 			name = Debug;
 		};
 		37271A3D2121F7B0006FDB5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		3730ABE6212C925600423E5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		3730ABE7212C925600423E5B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -553,6 +705,15 @@
 			buildConfigurations = (
 				37271A3C2121F7B0006FDB5F /* Debug */,
 				37271A3D2121F7B0006FDB5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3730ABE8212C925600423E5B /* Build configuration list for PBXNativeTarget "WarOfBeing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3730ABE6212C925600423E5B /* Debug */,
+				3730ABE7212C925600423E5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
