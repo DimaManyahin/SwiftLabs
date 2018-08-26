@@ -9,11 +9,11 @@
 import Foundation
 
 protocol Creating {
-    var mother : Self? {get set}
-    var father : Self? {get set}
+//    var mother : Self? {get set}
+//    var father : Self? {get set}
+//
+//    var children : [Self] {get set}
 
-    var children : [Self] {get set}
-
-    static func makeChild(father: inout Self, mother: inout Self) -> Self 
+//    static func makeChild(father: inout Self, mother: inout Self) -> Self 
 }
 

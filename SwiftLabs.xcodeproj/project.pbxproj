@@ -17,6 +17,9 @@
 		37271A4C2121F9B7006FDB5F /* BeingClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37271A4A2121F9B7006FDB5F /* BeingClass.swift */; };
 		37271A4D2121F9B7006FDB5F /* BeingStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37271A4B2121F9B7006FDB5F /* BeingStruct.swift */; };
 		37271A4F2121FFA7006FDB5F /* Creating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37271A4E2121FFA7006FDB5F /* Creating.swift */; };
+		372A2CF12132AE0400A9FB47 /* ConsoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A2CF02132AE0400A9FB47 /* ConsoleView.swift */; };
+		372A2D062132E59400A9FB47 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A2D052132E59400A9FB47 /* GameController.swift */; };
+		372A2D092132F5F400A9FB47 /* BeingFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372A2D082132F5F400A9FB47 /* BeingFactory.swift */; };
 		3730ABE5212C925600423E5B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3730ABE4212C925600423E5B /* main.swift */; };
 		3730ABEA212C99A700423E5B /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3730ABE9212C99A700423E5B /* Application.swift */; };
 		3730ABEC212C9C6100423E5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3730ABEB212C9C6100423E5B /* AppDelegate.swift */; };
@@ -101,6 +104,9 @@
 		37271A4A2121F9B7006FDB5F /* BeingClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeingClass.swift; sourceTree = "<group>"; };
 		37271A4B2121F9B7006FDB5F /* BeingStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeingStruct.swift; sourceTree = "<group>"; };
 		37271A4E2121FFA7006FDB5F /* Creating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creating.swift; sourceTree = "<group>"; };
+		372A2CF02132AE0400A9FB47 /* ConsoleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleView.swift; sourceTree = "<group>"; };
+		372A2D052132E59400A9FB47 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		372A2D082132F5F400A9FB47 /* BeingFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeingFactory.swift; sourceTree = "<group>"; };
 		3730ABE2212C925600423E5B /* WarOfBeing */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WarOfBeing; sourceTree = BUILT_PRODUCTS_DIR; };
 		3730ABE4212C925600423E5B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3730ABE9212C99A700423E5B /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
@@ -186,12 +192,22 @@
 			path = Being2;
 			sourceTree = "<group>";
 		};
+		372A2D072132F5D900A9FB47 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				372A2D082132F5F400A9FB47 /* BeingFactory.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		3730ABE3212C925600423E5B /* WarOfBeing */ = {
 			isa = PBXGroup;
 			children = (
+				372A2D072132F5D900A9FB47 /* Support */,
 				376E7BBF212CB8F600C9B177 /* Controllers */,
 				376E7BB1212CB5EE00C9B177 /* AppSupport */,
 				376E7BB2212CB60E00C9B177 /* Models */,
+				372A2CF02132AE0400A9FB47 /* ConsoleView.swift */,
 			);
 			path = WarOfBeing;
 			sourceTree = "<group>";
@@ -274,6 +290,7 @@
 			children = (
 				376E7BC0212CB91600C9B177 /* ControllerProtocol.swift */,
 				376E7BC2212CBA0400C9B177 /* WelcomeScreenController.swift */,
+				372A2D052132E59400A9FB47 /* GameController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -444,6 +461,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				376E7BC3212CBA0400C9B177 /* WelcomeScreenController.swift in Sources */,
+				372A2CF12132AE0400A9FB47 /* ConsoleView.swift in Sources */,
 				376E7BB8212CB7CF00C9B177 /* Living.swift in Sources */,
 				376E7BB4212CB7AA00C9B177 /* BeingProtocol.swift in Sources */,
 				376E7BAC212CB4E300C9B177 /* Tribe.swift in Sources */,
@@ -453,8 +471,10 @@
 				376E7BC1212CB91600C9B177 /* ControllerProtocol.swift in Sources */,
 				376E7BAE212CB59800C9B177 /* Random.swift in Sources */,
 				376E7BBA212CB7CF00C9B177 /* Creating.swift in Sources */,
+				372A2D092132F5F400A9FB47 /* BeingFactory.swift in Sources */,
 				3730ABEA212C99A700423E5B /* Application.swift in Sources */,
 				3730ABE5212C925600423E5B /* main.swift in Sources */,
+				372A2D062132E59400A9FB47 /* GameController.swift in Sources */,
 				376E7BBE212CB7DA00C9B177 /* BeingStruct.swift in Sources */,
 				376E7BB9212CB7CF00C9B177 /* Speaking.swift in Sources */,
 			);

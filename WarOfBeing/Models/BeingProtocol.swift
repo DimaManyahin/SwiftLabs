@@ -19,6 +19,7 @@ protocol BeingProtocol : CustomStringConvertible, Speaking, Living, Creating {
     
     init()
     init(name : String)
+    init(gender : BeingGender)
     init(gender : BeingGender, name : String, age : UInt)
 }
 
@@ -34,20 +35,24 @@ extension BeingProtocol {
     init(name: String) {
         self.init(gender: BeingGender.random(), name: name, age: Self.randomAge)
     }
+
+    init(gender : BeingGender) {
+        self.init(gender: gender, name: NSUUID().uuidString, age: Self.randomAge)
+    }
 }
 
 extension CustomStringConvertible where Self : BeingProtocol {
-//    var description: String {
-//        return "\(type(of:self)) with name=\(self.name), gender=\(self.gender), age=\(self.age)"
-//    }
     var description: String {
-        return """
-        \(type(of:self)) 
-        has father(\(self.father != nil ? "YES" : "NO")) 
-        has mother(\(self.mother != nil ? "YES" : "NO")) 
-        has children count = \(self.children.count)
-        """
+        return "\(type(of:self)) with name=\(self.name), gender=\(self.gender), age=\(self.age)"
     }
+//    var description: String {
+//        return """
+//        \(type(of:self)) 
+//        has father(\(self.father != nil ? "YES" : "NO")) 
+//        has mother(\(self.mother != nil ? "YES" : "NO")) 
+//        has children count = \(self.children.count)
+//        """
+//    }
 }
 
 extension Living where Self : BeingProtocol {
@@ -76,14 +81,14 @@ extension Speaking where Self : BeingProtocol {
     }
 }
 
-extension Creating where Self : BeingProtocol {
-    static func makeChild(father: inout Self, mother: inout Self) -> Self {
-        var child = Self()
-        child.father = father
-        child.mother = mother
-        father.children.append(child)
-        mother.children.append(child)
-        return child
-    }
-}
+//extension Creating where Self : BeingProtocol {
+//    static func makeChild(father: inout Self, mother: inout Self) -> Self {
+//        var child = Self()
+//        child.father = father
+//        child.mother = mother
+//        father.children.append(child)
+//        mother.children.append(child)
+//        return child
+//    }
+//}
 

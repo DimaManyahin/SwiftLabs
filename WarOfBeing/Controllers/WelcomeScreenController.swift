@@ -10,12 +10,35 @@ import Foundation
 
 class WelcomeScreenController: ControllerProtocol {
     
-    var hasUnfinishedWork = true
+    var hasUnfinishedWork : Bool {
+        return self.messageIndex < self.messages.count
+    }
     
-    private static var count = 0
+    private var currentTimeCounter = 0
+    private let messages = [
+        "   Welcome",
+        "        to",
+        "\"War of being\"",
+        ]
+    private var messageIndex = 0
+
+    func controllerDidAppear() {
+        ConsoleView.shared.clearDisplay()
+        self.showNextMessage()
+    }
+    
     func increaseTimeCounter() {
-        WelcomeScreenController.count += 1
-        self.hasUnfinishedWork = WelcomeScreenController.count < 10
+        self.currentTimeCounter += 1
+        if self.currentTimeCounter % Application.app.globalTimeCounterPerSecond != 0 {
+            return
+        }
+        self.showNextMessage()
     }
 
+    private func showNextMessage() {
+        if self.hasUnfinishedWork {
+            ConsoleView.shared.display(message: self.messages[self.messageIndex], size:.big)
+            self.messageIndex += 1
+        }
+    }
 }

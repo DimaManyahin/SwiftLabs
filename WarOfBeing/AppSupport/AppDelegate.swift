@@ -10,32 +10,41 @@ import Foundation
 
 class AppDelegate {
     
-    var currentController : ControllerProtocol?
+    private var currentController : ControllerProtocol?
     
     func applicationDidFinishLaunching () {
-        print("applicationDidFinishLaunching")
+//        print("applicationDidFinishLaunching")
         
-        self.currentController = WelcomeScreenController()
-        
-        
+//        self.currentController = WelcomeScreenController()
+        self.currentController = GameController()
+        self.currentController?.controllerDidAppear()
         
     }
     
     func globalTimeCounterIncreased() {
-        print("globalTimeCounterIncreased")
+//        print("globalTimeCounterIncreased")
         guard let controller = self.currentController else {
             return
         }
+        if controller.hasUnfinishedWork == false {
+            self.switchToNextController()
+        }
 
         controller.increaseTimeCounter()
-        if controller.hasUnfinishedWork == false {
-            self.currentController = nil
-        }
     }
     
     func shouldApplicationStopExecution() -> Bool {
-        print("shouldApplicationStopExecution")
+//        print("shouldApplicationStopExecution")
         
         return self.currentController == nil
+    }
+    
+    private func switchToNextController() {
+        if let controller = self.currentController, controller is WelcomeScreenController {
+            self.currentController = GameController()
+            self.currentController?.controllerDidAppear()
+        } else {
+            self.currentController = nil
+        }
     }
 }

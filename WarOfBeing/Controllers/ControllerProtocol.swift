@@ -8,9 +8,9 @@
 
 import Foundation
 
-protocol ControllerProtocol {
+protocol ControllerProtocol : class {
     var hasUnfinishedWork : Bool {get}
     
+    func controllerDidAppear()
     func increaseTimeCounter()
-    
 }

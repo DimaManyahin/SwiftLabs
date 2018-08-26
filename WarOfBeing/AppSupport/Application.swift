@@ -9,8 +9,12 @@
 import Foundation
 
 class Application {
-    static let `app` = Application()
-    lazy var appDelegate = AppDelegate()
+    static let `app` = Application()  
+    lazy var appDelegate = AppDelegate() 
+    
+    var globalTimeCounterPerSecond : Int {
+        return 4
+    }
     
     private init() {}
     private var appTimer : Timer?
@@ -18,13 +22,13 @@ class Application {
     
     func run() -> Int32 {
         self.appDelegate.applicationDidFinishLaunching()
-        setupAndRunTimer()
-        startRunLoop()
+        self.setupAndRunTimer()
+        self.startRunLoop()
         return 0
     }
     
     private func setupAndRunTimer() {
-        self.appTimer = Timer(timeInterval: 0.5, repeats: true, block: { [unowned self] _ in
+        self.appTimer = Timer(timeInterval: 1.0 / Double(self.globalTimeCounterPerSecond) , repeats: true, block: { [unowned self] _ in
             if self.shouldContinueExecution {
                 self.appDelegate.globalTimeCounterIncreased()
                 self.shouldContinueExecution = !self.appDelegate.shouldApplicationStopExecution()

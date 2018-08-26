@@ -18,13 +18,13 @@ struct BeingStruct : BeingProtocol {
     class Container {
         var content : BeingStruct?
         
-        init() {
-            print("Init of <\(type(of: self)): 0x\(String(unsafeBitCast(self, to: Int.self), radix: 16, uppercase: false))>")
-        }
-        
-        deinit {
-            print("Deinit of <\(type(of: self)): 0x\(String(unsafeBitCast(self, to: Int.self), radix: 16, uppercase: false))>")
-        }
+//        init() {
+//            print("Init of <\(type(of: self)): 0x\(String(unsafeBitCast(self, to: Int.self), radix: 16, uppercase: false))>")
+//        }
+//        
+//        deinit {
+//            print("Deinit of <\(type(of: self)): 0x\(String(unsafeBitCast(self, to: Int.self), radix: 16, uppercase: false))>")
+//        }
     }
     
     // let

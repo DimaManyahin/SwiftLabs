@@ -22,22 +22,22 @@ final class BeingClass : BeingProtocol {
         self.name = name
         self.age = age
         
-        print("Init of <\(type(of: self)): 0x\(String(unsafeBitCast(self, to: Int.self), radix: 16, uppercase: false))>")
+//        print("Init of <\(type(of: self)): 0x\(String(unsafeBitCast(self, to: Int.self), radix: 16, uppercase: false))>")
     }
     
-    deinit {
-        print("Deinit of <\(type(of: self)): 0x\(String(unsafeBitCast(self, to: Int.self), radix: 16, uppercase: false))>")
-    }
+//    deinit {
+//        print("Deinit of <\(type(of: self)): 0x\(String(unsafeBitCast(self, to: Int.self), radix: 16, uppercase: false))>")
+//    }
 }
 
-extension CustomStringConvertible where Self : BeingClass {
-    var description: String {
-        return """
-        \(type(of:self)) (0x\(String(unsafeBitCast(self, to: Int.self), radix: 16, uppercase: false)))
-        has father(0x\(String(unsafeBitCast(self.father, to: Int.self), radix: 16, uppercase: false))) 
-        has mother(0x\(String(unsafeBitCast(self.mother, to: Int.self), radix: 16, uppercase: false))) 
-        has children count = \(self.children.count)
-        """
-    }
-}
+//extension CustomStringConvertible where Self : BeingClass {
+//    var description: String {
+//        return """
+//        \(type(of:self)) (0x\(String(unsafeBitCast(self, to: Int.self), radix: 16, uppercase: false)))
+//        has father(0x\(String(unsafeBitCast(self.father, to: Int.self), radix: 16, uppercase: false))) 
+//        has mother(0x\(String(unsafeBitCast(self.mother, to: Int.self), radix: 16, uppercase: false))) 
+//        has children count = \(self.children.count)
+//        """
+//    }
+//}
 
