@@ -9,15 +9,15 @@
 import Foundation
 
 final class BeingClass : BeingProtocol {
-    static var maxAge: UInt = 105
     var gender : BeingGender
     var name : String
-    var age : UInt
+    var age : BeingAge
     weak var mother : BeingClass?
     weak var father : BeingClass?
     var children : [BeingClass] = []
+    weak var tribe : Tribe?
     
-    required init(gender : BeingGender, name : String, age : UInt) {
+    required init(gender : BeingGender, name : String, age : BeingAge) {
         self.gender = gender;
         self.name = name
         self.age = age

@@ -13,6 +13,8 @@ enum BeingType {
     case asStruct
 }
 
+typealias BeingCouple = (first: BeingProtocol, second: BeingProtocol)
+
 struct BeingFactory {
     static var beingType = BeingType.asClass
     
@@ -22,5 +24,25 @@ struct BeingFactory {
         } else {
             return BeingStruct(gender: gender)
         }
+    }
+    
+    static func beingChildren(from couple:BeingCouple) -> [BeingProtocol] {
+        var result = [BeingProtocol]()
+        if couple.first.gender != couple.second.gender {
+            let probabilityOfBirth = [(1, 1), (2, 91), (92, 96), (97, 99), (100, 100)]
+            let randNumber = (1...100).random
+            var childrenCount = 0
+            for ind in 0..<probabilityOfBirth.count {
+                let (start, end) = probabilityOfBirth[ind]
+                if start <= randNumber && randNumber <= end {
+                    childrenCount = ind
+                    break
+                }
+            }
+            (0...childrenCount).forEach { _ in
+                result.append(BeingFactory.being(gender: BeingGender.random()))
+            }
+        }
+        return result
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		371D934A21347CDD00DD3EF4 /* BeingAge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371D934921347CDD00DD3EF4 /* BeingAge.swift */; };
 		37271A3A2121F7B0006FDB5F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37271A392121F7B0006FDB5F /* main.swift */; };
 		37271A3F2121F7CF006FDB5F /* BeingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37271A3E2121F7CF006FDB5F /* BeingProtocol.swift */; };
 		37271A412121F7FB006FDB5F /* Speaking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37271A402121F7FB006FDB5F /* Speaking.swift */; };
@@ -94,6 +95,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		371D934921347CDD00DD3EF4 /* BeingAge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeingAge.swift; sourceTree = "<group>"; };
 		37271A372121F7B0006FDB5F /* Being2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Being2; sourceTree = BUILT_PRODUCTS_DIR; };
 		37271A392121F7B0006FDB5F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		37271A3E2121F7CF006FDB5F /* BeingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeingProtocol.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				376E7BAD212CB59800C9B177 /* Random.swift */,
 				376E7BAF212CB5DA00C9B177 /* BeingGender.swift */,
 				376E7BAB212CB4E300C9B177 /* Tribe.swift */,
+				371D934921347CDD00DD3EF4 /* BeingAge.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				376E7BC3212CBA0400C9B177 /* WelcomeScreenController.swift in Sources */,
+				371D934A21347CDD00DD3EF4 /* BeingAge.swift in Sources */,
 				372A2CF12132AE0400A9FB47 /* ConsoleView.swift in Sources */,
 				376E7BB8212CB7CF00C9B177 /* Living.swift in Sources */,
 				376E7BB4212CB7AA00C9B177 /* BeingProtocol.swift in Sources */,

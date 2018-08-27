@@ -11,11 +11,4 @@ import Foundation
 protocol Living {
     var isLive : Bool {get}
     mutating func growAge()
-    mutating func growAge(_ offset: UInt)
-}
-
-extension Living {
-    mutating func growAge() {
-        self.growAge(1)
-    }
 }

@@ -70,14 +70,26 @@ class GameController: ControllerProtocol {
     }
     
     func makeTruceStage() {
-        func makeCouples () {
-            
+        func makeCouples(inside tribe: Tribe) -> [BeingCouple] {
+            var result = [BeingCouple]()
+            var allReproductiveWomen = tribe.allReproductiveWomen
+            var allReproductiveMen = tribe.allReproductiveMen
+            for ind in 0..<(allReproductiveMen.count < allReproductiveWomen.count ? allReproductiveMen.count : allReproductiveWomen.count) {
+                result.append((allReproductiveMen[ind], allReproductiveWomen[ind]))
+            }
+            return result
         }
-        func makeChildrens () {
-            
+        func makeChildren(from couples: [BeingCouple]) -> [BeingProtocol] {
+            var result = [BeingProtocol]()
+            couples.forEach { couple in
+                result += BeingFactory.beingChildren(from: couple)
+            }
+            return result
         }
-        makeCouples()
-        makeChildrens()
+        self.tribes.forEach { tribe in
+            let children = makeChildren(from: makeCouples(inside: tribe))
+            tribe.accept(children: children)
+        }
         self.currentState = .beginOfWar
     }
     

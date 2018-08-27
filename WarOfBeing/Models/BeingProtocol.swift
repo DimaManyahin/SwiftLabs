@@ -9,35 +9,19 @@
 import Foundation
 
 protocol BeingProtocol : CustomStringConvertible, Speaking, Living, Creating {
-    static var maxAge : UInt {get}
-    static var randomAge : UInt {get}
-    
     var name : String {get set}
-    var age : UInt {get set}
+    var age : BeingAge {get set}
+    var tribe : Tribe?  {get set}
     
     var gender : BeingGender {get}
     
-    init()
-    init(name : String)
     init(gender : BeingGender)
-    init(gender : BeingGender, name : String, age : UInt)
+    init(gender : BeingGender, name : String, age : BeingAge)
 }
 
 extension BeingProtocol {
-    static var randomAge : UInt {
-        return (0...Self.maxAge).random
-    }
-    
-    init() {
-        self.init(gender: BeingGender.random(), name: NSUUID().uuidString, age: Self.randomAge)
-    }
-    
-    init(name: String) {
-        self.init(gender: BeingGender.random(), name: name, age: Self.randomAge)
-    }
-
     init(gender : BeingGender) {
-        self.init(gender: gender, name: NSUUID().uuidString, age: Self.randomAge)
+        self.init(gender: gender, name: NSUUID().uuidString, age: .child)
     }
 }
 
@@ -57,12 +41,12 @@ extension CustomStringConvertible where Self : BeingProtocol {
 
 extension Living where Self : BeingProtocol {
     var isLive : Bool {
-        return self.age < Self.maxAge
+        return self.age < BeingAge.maxAge()
     }
     
-    mutating func growAge(_ offset: UInt) {
+    mutating func growAge() {
         if self.isLive {
-            self.age += offset
+            self.age.incrimentAge()
         }
     }
 }

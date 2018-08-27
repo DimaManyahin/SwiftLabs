@@ -11,12 +11,19 @@ import Foundation
 class Tribe : CustomStringConvertible {
     
     var name = ""
-    var allBeing : [BeingProtocol] = []
+    private(set) var allBeing : [BeingProtocol] = []
     
     init(coupleCount: UInt) {
         (1...coupleCount).forEach { _ in
-            self.allBeing.append(BeingFactory.being(gender: .male))
-            self.allBeing.append(BeingFactory.being(gender: .female))
+            var being = BeingFactory.being(gender: .male)
+            being.tribe = self
+            being.growAge()
+            self.allBeing.append(being)
+            
+            being = BeingFactory.being(gender: .female)
+            being.tribe = self
+            being.growAge()
+            self.allBeing.append(being)
         }
     }
     
@@ -34,16 +41,25 @@ class Tribe : CustomStringConvertible {
 
     var allReproductiveWomen : [BeingProtocol] {
         return self.allWomen.filter { 
-            0 < $0.age && $0.age < 4
+            $0.age.isReproductive()
         }
     }
     
     var allReproductiveMen : [BeingProtocol] {
         return self.allMen.filter { 
-            0 < $0.age && $0.age < 4
+            $0.age.isReproductive()
         }
     }
     
+    func accept(children: [BeingProtocol]) {
+        children.forEach { being in
+            var child = being
+            if child.age == .child && (child.tribe !== self) {
+                child.tribe = self
+                self.allBeing.append(child)
+            }
+        }
+    }
 }
 
 extension CustomStringConvertible where Self : Tribe {

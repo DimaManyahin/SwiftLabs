@@ -10,10 +10,10 @@ import Foundation
 
 struct BeingStruct : BeingProtocol {
     
-    static var maxAge: UInt = 100
     var gender : BeingGender
     var name : String
-    var age : UInt
+    var age : BeingAge
+    weak var tribe : Tribe?
     
     class Container {
         var content : BeingStruct?
@@ -50,7 +50,7 @@ struct BeingStruct : BeingProtocol {
 
     var children : [BeingStruct] = []
 
-    init(gender : BeingGender, name : String, age : UInt) {
+    init(gender : BeingGender, name : String, age : BeingAge) {
         self.gender = gender;
         self.name = name
         self.age = age
