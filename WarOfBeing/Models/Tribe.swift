@@ -60,6 +60,62 @@ class Tribe : CustomStringConvertible {
             }
         }
     }
+    
+    func generateArmy(for roadCount: Int) -> ArmyFormation {
+        var allWarriors = self.allReproductiveMen
+        var countOfDefenceWarriors = Int(Double(allWarriors.count) * 0.2)
+        var defenceArmy = Army()
+        while countOfDefenceWarriors > 0 {
+            let index = (0..<allWarriors.count).random
+            defenceArmy.units.append(allWarriors[index])
+            allWarriors.remove(at: index)
+            countOfDefenceWarriors -= 1
+            defenceArmy.location.location = .home
+        }
+        
+        var result : [Army] = [] 
+        if allWarriors.count > roadCount {
+            var roadIndexes = IndexSet(integersIn: 0..<roadCount)
+            while roadIndexes.count > 0 {
+                guard let index = roadIndexes.random else {
+                    continue
+                }
+                roadIndexes.remove(index)
+
+                let unit = allWarriors.remove(at: result.count)
+                var army = Army()
+                army.units.append(unit)
+                army.location.location = .road(index)
+                army.readinessToMove = .generateReadyState()
+                result.append(army)
+            }
+            
+            roadIndexes = IndexSet(integersIn: 0..<roadCount)
+            allWarriors.forEach { unit in
+                guard let index = roadIndexes.random else {
+                    return
+                }
+
+                result[index].units.append(unit)
+            }
+        } else {
+            var roadIndexes = IndexSet(integersIn: 0..<roadCount)
+            allWarriors.forEach { unit in
+                guard let index = roadIndexes.random else {
+                    return
+                }
+                roadIndexes.remove(index)
+
+                var army = Army()
+                army.units.append(unit)
+                army.location.location = .road(index)
+                army.readinessToMove = .generateReadyState()
+                result.append(army)
+            }
+        }
+        
+        return (result, defenceArmy)
+    }
 }
 
 extension CustomStringConvertible where Self : Tribe {

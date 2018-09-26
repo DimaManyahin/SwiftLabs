@@ -12,6 +12,7 @@ final class BeingClass : BeingProtocol {
     var gender : BeingGender
     var name : String
     var age : BeingAge
+    var damageForce : Double
     weak var mother : BeingClass?
     weak var father : BeingClass?
     var children : [BeingClass] = []
@@ -21,7 +22,7 @@ final class BeingClass : BeingProtocol {
         self.gender = gender;
         self.name = name
         self.age = age
-        
+        self.damageForce = 0
 //        print("Init of <\(type(of: self)): 0x\(String(unsafeBitCast(self, to: Int.self), radix: 16, uppercase: false))>")
     }
     

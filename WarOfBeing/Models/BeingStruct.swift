@@ -13,6 +13,7 @@ struct BeingStruct : BeingProtocol {
     var gender : BeingGender
     var name : String
     var age : BeingAge
+    var damageForce : Double
     weak var tribe : Tribe?
     
     class Container {
@@ -54,5 +55,6 @@ struct BeingStruct : BeingProtocol {
         self.gender = gender;
         self.name = name
         self.age = age
+        self.damageForce = 0
     }
 }

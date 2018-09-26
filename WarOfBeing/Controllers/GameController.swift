@@ -21,6 +21,7 @@ class GameController: ControllerProtocol {
     
     private var currentState = GameState.initial
     var tribes : [Tribe] = []
+    var battleField = BattleField()
     
     var hasUnfinishedWork : Bool {
         return self.currentState != .endOfGame
@@ -36,7 +37,7 @@ class GameController: ControllerProtocol {
         case .truce:
             self.makeTruceStage()
         case .beginOfWar:
-            self.makeBiginOfWar()
+            self.makeBeginOfWar()
         case .war:
             self.makeWar()
         case .endOfWar:
@@ -61,6 +62,8 @@ class GameController: ControllerProtocol {
         self.tribes.forEach { 
             ConsoleView.shared.display(message: $0.description)
         }
+        self.battleField.size.roadCount = (10...15).random
+        self.battleField.size.distanceBetweenTribes = 8
 
         self.currentState = .truce
     }
@@ -93,12 +96,20 @@ class GameController: ControllerProtocol {
         self.currentState = .beginOfWar
     }
     
-    func makeBiginOfWar() {
+    func makeBeginOfWar() {
+        self.tribes.forEach { tribe in
+            self.battleField.armyFormations.append(tribe.generateArmy(for: self.battleField.size.roadCount))
+        }
         
+        self.currentState = .war
     }
 
     func makeWar() {
-        
+        if self.battleField.canMakeMoveOfArmies {
+            self.battleField.makeMoveOfArmies()
+        } else {
+            self.currentState = .endOfWar
+        }
     }
 
     func makeEndOfWar() {

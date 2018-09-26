@@ -33,3 +33,23 @@ extension Bool {
         return WarOfBeing.random(in: 0..<100) % 2 == 0
     }
 }
+
+extension IndexSet {
+    var random: IndexSet.RangeView.Index? {
+        guard let first = self.first else {
+            return nil
+        }
+        guard let last = self.last else {
+            return nil
+        }
+        var result = (first...last).random
+        if let index1 = self.integerGreaterThanOrEqualTo(result) {
+            result = index1
+        } else if let index2 = self.integerLessThanOrEqualTo(result) {
+            result = index2
+        }
+        return result
+    }
+}
+
+

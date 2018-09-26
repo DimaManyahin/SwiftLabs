@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 var result : Int32 = 0
 autoreleasepool {
     result = Application.app.run()

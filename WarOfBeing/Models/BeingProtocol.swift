@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol BeingProtocol : CustomStringConvertible, Speaking, Living, Creating {
+protocol BeingProtocol : CustomStringConvertible, Speaking, Living, Creating, WarriorProtocol {
     var name : String {get set}
     var age : BeingAge {get set}
     var tribe : Tribe?  {get set}
