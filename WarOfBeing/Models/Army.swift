@@ -12,7 +12,7 @@ typealias ArmyFormation = (advancingArmy: [Army], defenceArmy: Army)
 
 enum ReadinessToMove : Equatable {
     case unavailable
-    case ready    
+    case ready
     case readyAfter(Int)
     
     static func generateReadyState() -> ReadinessToMove {
@@ -61,6 +61,17 @@ struct Army : CustomStringConvertible {
     }
     var location = BattleFieldLocation()
     var readinessToMove : ReadinessToMove = .unavailable
+    mutating func increasePower(delta: Double) {
+        for i in 0..<self.units.count {
+            self.units[i].damageForce += delta
+        }
+        
+//        self.units[0].damageForce += delta
+//        self.units = self.units.map({ being in
+//            being.damageForce += delta
+//            return being
+//        })
+    }
     
 //    mutating func makeMoveIfPossible() {
 //        switch self.readinessToMove {
@@ -79,9 +90,7 @@ struct Army : CustomStringConvertible {
     
     
     var description: String {
-        
-//        return "\(self.name) has \(self.allBeing.count) beings"
-        return ""
+        return "Power of army=\(self.power) location=\(self.location) readinessToMove=\(self.readinessToMove)"
     }
 
 }

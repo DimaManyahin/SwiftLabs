@@ -36,8 +36,23 @@ class BattleField {
             return
         }
         
+        self.increaseExperienceOfArmys()
         
         
-        
+    }
+    
+    func increaseExperienceOfArmys() {
+        for i in 0..<self.armyFormations.count {
+            var (advancingArmy, defenceArmy) = self.armyFormations[i]
+            defenceArmy.increasePower(delta: 1.2)
+            for j in 0..<advancingArmy.count {
+                var army = advancingArmy[j]
+                if army.readinessToMove == .ready {
+                    army.increasePower(delta: 1)
+                    advancingArmy[j] = army
+                }
+            }
+            self.armyFormations[i] = (advancingArmy, defenceArmy)
+        }
     }
 }
